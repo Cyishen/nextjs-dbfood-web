@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 const LoginPage = () => {
   return (
     <div className="p-4 h-[700px] flex items-center justify-center">
-      <div className=" h-full shadow-2xl rounded-2xl flex flex-col md:flex-row md:h-[70%] md:w-full lg:w-[60%] 2xl:w-1/2">
+      <div className=" h-full shadow-2xl rounded-2xl flex flex-col md:flex-row md:h-[70%] md:w-full lg:w-[60%] 2xl:w-1/2 bg-white bg-opacity-50">
         <div className="relative h-1/3 w-full md:h-full md:w-1/2">
           <Image src="/burger.svg" alt="" fill className="object-contain items-center justify-center"/>
         </div>

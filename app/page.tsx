@@ -1,14 +1,12 @@
-import HeroCarousel from "@/components/HeroCarousel"
+import Event from "@/components/Event"
 import Menu from "@/components/Menu"
-
-import Link from 'next/link'
 import React from 'react'
 
 export default function Home() {
   return (
     <main>
       <Menu />
-      <HeroCarousel />
+      <Event />
     </main>
   )
 }

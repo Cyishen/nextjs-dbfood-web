@@ -1,0 +1,39 @@
+{
+    "movies": [
+        {
+          "id": "1",
+          "title": "捲捲德腸烤牛堡",
+          "desc": "Ignite your taste buds with a fiery combination of spicy pepperoni, jalapeños, crushed red pepper flakes, and melted mozzarella cheese, delivering a kick with every bite.",
+          "img": "/burgers/b1.png",
+          "price": "99",
+          "options": [
+            {
+              "title": "單點",
+              "additionalPrice": 0,
+            },
+            {
+              "title": "套餐",
+              "additionalPrice": 60,
+            }
+          ]
+        },
+        {
+            "id": "2",
+            "title": "香酥鮭魚堡",
+            "desc": "Crunchy Salmon Burger - A crispy delight featuring tender salmon, topped with fresh vegetables and savory sauce, a mouthwatering treat!",
+            "img": "/burgers/b2.png",
+            "price": "99",
+            "options": [
+              {
+                "title": "單點",
+                "additionalPrice": 0,
+              },
+              {
+                "title": "套餐",
+                "additionalPrice": 60,
+              }
+            ]
+          }
+
+    ]
+}
