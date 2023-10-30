@@ -7,24 +7,13 @@ import Price from "@/components/Price";
 import Animate from "@/components/Animate";
 import { Button } from "@/components/ui/button";
 
-import { usePathname, useSearchParams, useParams} from "next/navigation";
+import { useParams } from "next/navigation";
 
 
 const SingleProductPage = () => {
+
   const { id } = useParams();
-  const productId = typeof id === 'string' ? id : id[0]
-  console.log(productId)
-  const product = findProductById(productId);
-
-  // const pathname = usePathname();
-  // const segments = pathname.split('/');
-
-  // let product = null
-
-  // if (segments.length === 3 && segments[1] === 'product') {
-  //   const id = segments[2]; 
-  //   product = findProductById(id)
-  // }
+  const product = findProductById(id as string);
 
   function findProductById(id: string) {
     let product = burgers.find((item) => item.id === id);
@@ -42,12 +31,12 @@ const SingleProductPage = () => {
 
       <div className="p-4 md:px-24 lg:px-32 xl:px-40 max-w-[1280px] mx-auto h-auto flex flex-col justify-around md:flex-row md:gap-6 md:items-center mb-36 relative">
         {product?.img && (
-          <div className="relative w-full h-1/2 md:h-[60%] flex justify-center">
+          <div className="relative w-1/2 h-1/2 md:h-[60%] flex justify-center">
             <Animate src={product.img} />
           </div>
         )}
 
-        <div className="flex flex-col gap-4 md:h-[70%] md:justify-center p-4 bg-white bg-opacity-50">
+        <div className="w-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center p-4 bg-white bg-opacity-50">
           <h1 className="text-3xl font-bold xl:text-5xl">{product?.title}</h1>
           <p>{product?.desc}</p>
 

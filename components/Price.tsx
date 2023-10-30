@@ -14,36 +14,36 @@ import { toast } from "react-toastify";
 
 
 const Price = ({ product }: {product: ProductType}) => {
-  const [total, setTotal] = useState(product.price);
-  const [quantity, setQuantity] = useState(1);
-  const [selected, setSelected] = useState(0);
+    const [total, setTotal] = useState(product.price);
+    const [quantity, setQuantity] = useState(1);
+    const [selected, setSelected] = useState(0);
 
-  const router = useRouter();
-  const { addToCart } = useCartStore();
+    const router = useRouter();
+    const { addToCart } = useCartStore();
 
-  const handleCart = () => {
-    addToCart({
-      id: product.id,
-      title: product.title,
-      img: product.img,
-      price: total,
-      ...(product.options?.length && {optionTitle: product.options[selected].title}),
-      quantity: quantity,
-    })
+    const handleCart = () => {
+        addToCart({
+        id: product.id,
+        title: product.title,
+        img: product.img,
+        price: total,
+        ...(product.options?.length && {optionTitle: product.options[selected].title}),
+        quantity: quantity,
+        })
 
-    toast.success("The product add to cart")
-  }
-
-  useEffect(() => {
-    if (product.options?.length) {
-      const additional = product.options[selected]?.additionalPrice ?? 0;
-      setTotal(
-        quantity * product.price + additional
-      )
-    } else {
-      setTotal(quantity * product.price);
+        toast.success("The product add to cart")
     }
-  }, [quantity, selected, product]);
+
+    useEffect(() => {
+        if (product.options?.length) {
+        const additional = product.options[selected]?.additionalPrice ?? 0;
+        setTotal(
+            quantity * product.price + additional
+        )
+        } else {
+        setTotal(quantity * product.price);
+        }
+    }, [quantity, selected, product]);
 
   return (
     <div className="flex flex-col gap-4">
