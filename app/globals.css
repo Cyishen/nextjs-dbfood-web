@@ -143,3 +143,9 @@ body {
     opacity: 0;
   }
 }
+
+.cart-icon {
+  position: fixed;
+  right: 30px; 
+  bottom: 10%; 
+}
