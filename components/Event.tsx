@@ -5,7 +5,7 @@ import Image from "next/image";
 const Event = () => {
   return (
     <div className="flex flex-col md:flex-row md:justify-between h-[50vh] md:h-[40vh] mb-10 md:mb-0">
-      <div className="flex-1 flex flex-col justify-center items-center text-center gap-3 p-6">
+      <div className="flex-1 flex flex-col items-center text-center gap-3 p-6">
           <Halloween />
           <Image src="/touch.png" alt="touch" width={30} height={30}></Image>
         <h1 className="text-5xl font-extrabold xl:text-6xl mt-3">Halloween Coming</h1>
