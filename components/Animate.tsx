@@ -22,7 +22,7 @@ const Animate = ({ src }: { src: string }) => {
   useEffect(() => {
     if (imageRef.current) {
       requestAnimationFrame(() => {
-        imageRef.current!.style.transition = 'transform 1s ease, opacity 2s ease';
+        imageRef.current!.style.transition = 'transform 3s ease, opacity 3s ease';
         imageRef.current!.style.transform = 'scale(1)';
         imageRef.current!.style.opacity = '1';
       });
