@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <Menu />
-      <Event />
+      {/* <Event /> */}
       <div className="cart-icon block md:hidden">
         <CartIconMobile />
       </div>

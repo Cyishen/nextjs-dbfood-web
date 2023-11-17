@@ -8,6 +8,7 @@ import AuthProvider from '@/components/AuthProvider'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Slide from '@/components/Slide'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -48,6 +49,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
+          <Slide />
           <Footer />
           <ToastContainer position="bottom-right" theme="light" autoClose={3000} />
         </AuthProvider>
