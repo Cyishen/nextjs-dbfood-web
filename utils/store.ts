@@ -17,7 +17,7 @@ export const useCartStore = create(persist<CartType & ActionTypes>( (set, get) =
     addToCart(item) {
         //取得購物車所有商品
         const products = get().products
-        console.log("新增",products)
+        // console.log("新增",products)
         //尋找find.購物車中id是否與新添加商品item.id相同 && title是否相同
         const productInCart = products.find( product => product.id === item.id && product.optionTitle === item.optionTitle)
 

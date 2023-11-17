@@ -13,8 +13,9 @@ import { useParams } from "next/navigation";
 const SingleProductPage = () => {
 
   const { id } = useParams();
+  // console.log(id);
   const product = findProductById(id as string);
-
+  // console.log(product);
   function findProductById(id: string) {
     let product = burgers.find((item) => item.id === id);
     if (!product) {

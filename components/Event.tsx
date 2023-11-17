@@ -8,7 +8,9 @@ const Event = () => {
       <div className="flex-1 flex flex-col items-center text-center gap-3 p-6">
           <Halloween />
           <Image src="/touch.png" alt="touch" width={30} height={30}></Image>
-        <h1 className="text-5xl font-extrabold xl:text-6xl mt-3">Halloween Coming</h1>
+        <h1 className="text-5xl font-extrabold xl:text-6xl mt-3">
+          Halloween Coming
+        </h1>
         <p className="xl:text-xl">
           Oct 31, 2023 10:00 a.m. PT
         </p>

@@ -17,10 +17,10 @@ const CartIconMobile = () => {
 
   return (
     <Link href="/cart" className="">
-        <div className="relative text-xl mr-4 flex-row bg-white opacity-50 rounded-full p-2">
-            <Image src="/food-cart.png" alt="cart-logo" width={35} height={35} className=""/>
+        <div className="relative text-xl mr-4 flex-row bg-black opacity-50 rounded-full p-2">
+            <Image src="/cart.svg" alt="cart-logo" width={35} height={35} className=""/>
             {totalItems === 0 ? "" : 
-                <span className="absolute -bottom-2 left-6 bg-red-200 rounded-full px-2">
+                <span className="absolute -bottom-1 left-9 bg-red-500 text-white text-sm px-2 rounded-sm">
                   {totalItems}
                 </span>
             }

@@ -17,13 +17,13 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center justify-center w-2/3'>
-          <div className='items-center justify-center'>
+          <div className='flex items-center justify-center'>
             <Link href='/'>
               <Image
                 src="/burger.svg"
                 alt="logo"
-                height="80"
-                width="80"
+                height={70}
+                width={70}
               >
               </Image>
             </Link>

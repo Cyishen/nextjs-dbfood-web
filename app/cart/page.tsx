@@ -16,7 +16,6 @@ const CartPage = () => {
         useCartStore.persist.rehydrate()
     },[])
 
-
   return (
     <div className="p-6 mb-20 flex flex-col items-center justify-center md:gap-8">
         <div className="w-full p-2 flex justify-between m-4 max-w-7xl">
@@ -33,26 +32,34 @@ const CartPage = () => {
                     <h2 className="hidden md:block">合計</h2>
                 </div>
                 <hr className="my-2 border-black" />
-
-                {products.map((item)=> (
-                    <div className="flex flex-wrap md:flex-row items-center justify-between mb-4 gap-5" key={item.id+ item.optionTitle}>
-                        { item.img && (
-                            <Image src={item.img} alt="" width={100} height={100} />
-                        )}
-                        <div>
-                            <h1 className="uppercase text-base md:text-xl font-bold">{item.title} x {item.quantity}</h1>
-                            <span>{item.optionTitle}</span>
-                        </div>
-                        <div className="font-bold hidden md:block">{item.price}</div>
-                 
-                        <div className='flex flex-row gap-6'>
-                            <h2 className="font-bold">${item.price}</h2>
-                            <span className="bg-red-400 text-white px-2 rounded-md cursor-pointer" 
-                                onClick={ ()=>removeFromCart(item) }
-                            >X</span>
-                        </div>
-                    </div>    
-                ))}
+                
+                {products.length === 0 ? (
+                    <h1 className='flex justify-center items-center h-[100px] font-bold capitalize'>
+                        Add your food
+                    </h1>
+                ) : (
+                <>
+                    {products.map((item)=> (
+                        <div className="flex flex-wrap md:flex-row items-center justify-between mb-4 gap-5" key={item.id+ item.optionTitle}>
+                            { item.img && (
+                                <Image src={item.img} alt="" width={100} height={100} />
+                            )}
+                            <div>
+                                <h1 className="uppercase text-base md:text-xl font-bold">{item.title} x {item.quantity}</h1>
+                                <span>{item.optionTitle}</span>
+                            </div>
+                            <div className="font-bold hidden md:block">{item.price}</div>
+                    
+                            <div className='flex flex-row gap-6'>
+                                <h2 className="font-bold">${item.price}</h2>
+                                <span className="bg-red-400 text-white px-2 rounded-md cursor-pointer" 
+                                    onClick={ ()=>removeFromCart(item) }
+                                >X</span>
+                            </div>
+                        </div>    
+                    ))}
+                </>
+                )}
             </div>
             
             <div className="p-4 w-full bg-fuchsia-50 text-2xl flex flex-col gap-4 justify-center">

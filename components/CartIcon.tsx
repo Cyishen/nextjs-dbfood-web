@@ -18,9 +18,9 @@ const CartIcon = () => {
   return (
     <Link href="/cart" className="hidden md:block">
         <div className="relative text-xl mr-4 flex-row">
-            <Image src="/food-cart.png" alt="cart-logo" width={35} height={35} className="hidden md:block"/>
+            <Image src="/cart.svg" alt="cart-logo" width={40} height={40} className="hidden md:block"/>
             {totalItems === 0 ? "" : 
-                <span className="absolute -bottom-2 left-6 bg-red-200 rounded-sm px-2 hidden md:block">
+                <span className="absolute -bottom-0 left-8 bg-red-500 text-white px-2 hidden md:block text-sm rounded-sm">
                   {totalItems}
                 </span>
             }

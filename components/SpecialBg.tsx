@@ -20,7 +20,7 @@ const SpecialBg = () => {
 
     return (
         <div className="flex justify-center items-center">
-            <Button onClick={handleClick}>
+            <Button onClick={handleClick} variant="outline">
                 <Image src="/pumpkin.png" alt="pumpkin" width={30} height={30}>
                 </Image>
             </Button>
