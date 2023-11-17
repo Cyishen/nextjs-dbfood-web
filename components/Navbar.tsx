@@ -10,8 +10,8 @@ import CartIcon from './CartIcon'
 const Navbar = () => {
   
   return (
-    <nav className='w-full'>
-      <div className='flex flex-row justify-between items-center px-5 py-4 border-b'>
+    <nav className='w-full max-w-[1533px] mx-auto'>
+      <div className='flex flex-row justify-between items-center px-5 py-4'>
         <div className='flex justify-start w-1/3 md:mx-auto gap-3'>
           <SpecialBg />
         </div>

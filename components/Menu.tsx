@@ -6,7 +6,7 @@ import { ChevronsDown } from 'lucide-react'
 
 const Menu = () => {
   return (
-    <section className="md:px-10 py-10">
+    <section className="py-10 max-w-[1533px] mx-auto">
       <div className="lg:px-20 xl:px-40 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold">
           The Best<br />
@@ -21,7 +21,7 @@ const Menu = () => {
           Order Now<ChevronsDown />
         </Button>
       </div>
-      <div className="pl-4 py-4 lg:px-20 xl:px-40 flex flex-col md:flex-row items-center justify-center gap-4">
+      <div className="pl-4 sm:pr-4 py-4 lg:px-20 xl:px-40 flex flex-col md:flex-row items-center justify-center gap-4">
           {menu.map((category) => (
           <Link
               href={`/menu/${category.slug}`}

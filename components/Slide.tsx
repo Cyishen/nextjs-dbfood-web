@@ -38,7 +38,11 @@ const rowOneImages = [
 const Slide = () => {
   return (
     <div className='w-full flex items-center justify-center mb-10 md:mb-20'>
-      <div className='max-w-7xl relative'>
+      <div className='max-w-7xl relative sm:px-4'>
+        <div className="flex items-center gap-3">
+          <h1 className="text-3xl sm:text-4xl font-bold text-red-500 px-4 sm:px-0">NEW Coming</h1>
+          <Image src="/hot.svg" alt='hot' width={60} height={60}/>
+        </div>
         <div className='mt-10'>
           <Marquee>
             {rowOneImages.map((i, index) => (
