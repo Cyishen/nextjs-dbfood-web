@@ -18,9 +18,9 @@ const CartPage = () => {
 
   return (
     <div className="p-6 mb-20 flex flex-col items-center justify-center md:gap-8">
-        <div className="w-full p-2 flex justify-between m-4 max-w-7xl">
+        <div className="w-full flex justify-between m-4 max-w-7xl">
             <Button className="text-xl" variant="outline" onClick={()=>router.back()}>上一頁</Button>
-            <h1 className="text-4xl font-bold flex">結帳內容</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold flex">結帳內容</h1>
         </div>
 
         <div className="w-full flex flex-col gap-4 border max-w-7xl bg-white bg-opacity-50"> 
