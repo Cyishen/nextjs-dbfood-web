@@ -6,7 +6,7 @@ import { ChevronsDown } from 'lucide-react'
 
 const Menu = () => {
   return (
-    <section className="py-10 max-w-[1533px] mx-auto">
+    <section className="py-5 max-w-[1533px] mx-auto">
       <div className="lg:px-20 xl:px-40 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold">
           The Best<br />
@@ -14,11 +14,11 @@ const Menu = () => {
           {" "}&{" "} 
           <span className="donut-gradient">Donut</span>
         </h1>
-        <p className="max-w-xs mx-auto text-gray-500 mt-3">
-          Each bite is a perfect <br/ > combination of fresh, quality ingredients
+        <p className="max-w-xs mx-auto text-white mt-3">
+          Each bite is a perfect combination of fresh, quality ingredients
         </p>
         <Button className='mt-4 font-semibold' variant="destructive">
-          Order Now<ChevronsDown />
+          Order Now
         </Button>
       </div>
       <div className="pl-4 sm:pr-4 py-4 lg:px-20 xl:px-40 flex flex-col md:flex-row items-center justify-center gap-4">

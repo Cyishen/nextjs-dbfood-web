@@ -12,7 +12,7 @@ const SpecialBg = () => {
         const body = document.querySelector('body');
         if (body) {
             setBackground((prevBackground) => !prevBackground);
-            body.style.backgroundImage = background ? 'url(/bg-halloween.png)' : 'none';
+            body.style.backgroundImage = background ? 'url(/bg-halloween.png)' : 'linear-gradient(0deg, #d6c7b1 0%, #F5EBDC 100%)';
             // body.classList.add(background ? 'bg-no-repeat' : 'none');
             // body.classList.add(background ? 'bg-cover' : 'none');
         }

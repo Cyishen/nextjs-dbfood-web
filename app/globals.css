@@ -79,6 +79,9 @@ body {
   /* background-image: url("/bg-halloween.png"); */
   background-repeat: no-repeat;
   background-size: cover;
+  background: linear-gradient(0deg, #d6c7b1 0%, #F5EBDC 100%);
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 .gradient_blue-purple {
