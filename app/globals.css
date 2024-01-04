@@ -75,6 +75,15 @@
   }
 }
 
+@layer utilities {
+  .word-hover {
+    @apply transition-transform duration-300 hover:underline hover:text-[#e8bb72] cursor-pointer
+  }
+  .img-hover {
+    @apply hover:bg-[#e8bb72] flex justify-center items-center w-10 h-10 rounded-full 
+  }
+}
+
 body {
   /* background-image: url("/bg-halloween.png"); */
   background-repeat: no-repeat;
