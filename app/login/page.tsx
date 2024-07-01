@@ -47,7 +47,8 @@ const LoginPage = () => {
         <div className="p-10 flex flex-col gap-8 md:w-1/2">
           <h1 className="font-bold text-xl xl:text-3xl">Welcome</h1>
           <p>Login into your account or create a new one using social buttons</p>
-          <button className="flex gap-4 p-4 ring-1 ring-orange-200 rounded-md" onClick={handleLogin}>
+
+          <button className="flex gap-4 p-4 ring-1 ring-orange-200 rounded-md login-hover" onClick={handleLogin}>
             <FcGoogle size={30} />
             <span>Sign in with Google</span>
           </button>

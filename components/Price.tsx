@@ -1,19 +1,22 @@
 "use client"
 
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { combo, singleProduct } from "@/data";
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 import { ProductType } from "@/types/types"
 import { useCartStore } from "@/utils/store";
 
-import { toast } from "react-toastify";
+import { Heart } from 'lucide-react';
+import { useLikeStore, LikeItemType } from "@/utils/like";
 
 
-const Price = ({ product }: {product: ProductType}) => {
+const Price = ({ product, liked }: {product: ProductType, liked: LikeItemType }) => {
     const [total, setTotal] = useState(product.price);
     const [quantity, setQuantity] = useState(1);
     const [selected, setSelected] = useState(0);
@@ -30,8 +33,23 @@ const Price = ({ product }: {product: ProductType}) => {
         ...(product.options?.length && {optionTitle: product.options[selected].title}),
         quantity: quantity,
         })
-
         toast.success("The product add to cart")
+    }
+
+    const { addToFavorites } = useLikeStore();
+
+    const handleLike = () => {
+      if (liked) {
+        addToFavorites({
+          id: liked.id,
+          title: liked.title,
+          img: liked.img,
+          price: liked.price,
+        });
+        toast.success("The product add to love")
+      } else {
+        console.error("Invalid 'liked' object:", liked);
+      }
     }
 
     useEffect(() => {
@@ -110,6 +128,9 @@ const Price = ({ product }: {product: ProductType}) => {
                 </Button>
                 <Button variant={"destructive"} className="w-56" onClick={handleCart}>
                     加入購物車
+                </Button>
+                <Button variant="outline" onClick={handleLike}>
+                    <Heart />
                 </Button>
             </div>
         </div>

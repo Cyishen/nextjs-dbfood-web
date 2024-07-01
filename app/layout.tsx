@@ -8,6 +8,7 @@ import AuthProvider from '@/components/AuthProvider'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { LikedProvider } from '@/lib/LikedContext'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -44,12 +45,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <AuthProvider>
-          <Navbar />
-          <main>
-            {children}
-          </main>
-          <Footer />
-          <ToastContainer position="bottom-right" theme="light" autoClose={3000} />
+          <LikedProvider>
+            <Navbar />
+            <main>
+              {children}
+            </main>
+            <Footer />
+            <ToastContainer position="bottom-right" theme="light" autoClose={3000} />
+          </LikedProvider>
         </AuthProvider>
       </body>
     </html>

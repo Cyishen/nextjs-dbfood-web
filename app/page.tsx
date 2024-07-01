@@ -3,6 +3,7 @@ import Menu from "@/components/Menu"
 import Slide from "@/components/Slide"
 import React from 'react'
 
+
 export default function Home() {
   return (
     <main>

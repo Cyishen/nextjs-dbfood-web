@@ -9,13 +9,11 @@ import { Button } from "@/components/ui/button";
 
 import { useParams } from "next/navigation";
 
-
 const SingleProductPage = () => {
 
   const { id } = useParams();
-  // console.log(id);
   const product = findProductById(id as string);
-  // console.log(product);
+  // console.log('單一商品是什麼:',product);
   function findProductById(id: string) {
     let product = burgers.find((item) => item.id === id);
     if (!product) {
@@ -38,10 +36,12 @@ const SingleProductPage = () => {
         )}
 
         <div className="md:w-1/2 flex flex-col gap-4 md:h-[70%] md:justify-center p-4 bg-white bg-opacity-50">
-          <h1 className="text-3xl font-bold xl:text-5xl">{product?.title}</h1>
+          <div className="flex justify-between items-center">
+            <h1 className="text-3xl font-bold xl:text-5xl">{product?.title}</h1>
+          </div>
           <p>{product?.desc}</p>
 
-          {product && <Price product={product} />}
+          {product && <Price product={product} liked={product}/>}
         </div>
       </div>
     </div>

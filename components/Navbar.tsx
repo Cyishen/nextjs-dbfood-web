@@ -6,6 +6,7 @@ import MobileSidebar from './Mobile-sidebar'
 import SpecialBg from './SpecialBg'
 import UserLinks from './UserLinks'
 import CartIcon from './CartIcon'
+import LikeIcon from './LikeIcon'
 
 const Navbar = () => {
   
@@ -31,6 +32,7 @@ const Navbar = () => {
         </div>
 
         <div className='flex flex-row justify-end w-1/3 md:mx-auto gap-5'>
+          <LikeIcon />
           <CartIcon />
           <UserLinks />
           <MobileSidebar />
